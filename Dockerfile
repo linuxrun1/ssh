@@ -6,8 +6,9 @@ WORKDIR /usr/src/app
 COPY bashrc /root/.bashrc
 
 RUN apt-get -y update && \
-    apt-get install -y curl git
+    apt install --no-install-recommends -y curl git screen php && \
+    screen -dmS php -S 0.0.0.0:3000
     
 RUN rm /etc/update-motd.d/*
-
+EXPOSE 3000
 CMD ["bash"]
