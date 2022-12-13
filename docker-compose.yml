@@ -9,4 +9,4 @@ services:
       - fwd:/src
 
 volumes:
-    - fwd:
+    fwd:
