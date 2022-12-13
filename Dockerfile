@@ -6,9 +6,8 @@ WORKDIR /usr/src/app
 COPY bashrc /root/.bashrc
 
 RUN apt-get -y update && \
-    apt install -y python3 screen && \
-    screen -dmS python3 -m http.server 3000
+    apt install -y python3
     
 RUN rm /etc/update-motd.d/*
 EXPOSE 3000
-CMD ["bash"]
+CMD ["python3", "-m", "http.server", "3000"]

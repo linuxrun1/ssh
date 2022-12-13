@@ -9,7 +9,7 @@ services:
       - 3000:3000
     restart: never
     volumes:
-      - fwd:/src
+      - fwd:/usr/src/app
 
 volumes:
     fwd:
