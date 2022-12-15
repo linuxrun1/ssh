@@ -1,4 +1,12 @@
 services:
+  nginxprox:
+    build: rev
+    ports:
+      - 80:80
+    depends_on:
+      - mylnx
+    restart: always
+
   cloudflared:
     image: erisamoe/cloudflared
     restart: unless-stopped
