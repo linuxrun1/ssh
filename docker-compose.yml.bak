@@ -1,0 +1,14 @@
+services:
+ dev:
+    image: okteto/dev:${DOCKER_TAG:-latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    restart: never
+    volumes:
+      - fwd:/usr/src/app
+
+volumes:
+    fwd:

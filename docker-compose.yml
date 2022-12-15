@@ -1,15 +1,11 @@
-version: '3.7'
 services:
  dev:
-    image: okteto/dev:${DOCKER_TAG:-latest}
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: docker.io/dorowu/ubuntu-desktop-lxde-vnc
     ports:
-      - 3000:3000
+      - 80:80
     restart: never
     volumes:
-      - fwd:/usr/src/app
+      - shm:/dev/shm
 
 volumes:
-    fwd:
+    shm:
