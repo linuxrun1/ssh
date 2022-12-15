@@ -1,11 +1,9 @@
 services:
- dev:
-    image: docker.io/dorowu/ubuntu-desktop-lxde-vnc
-    ports:
-      - 6079:6079
-    restart: never
-    volumes:
-      - shm:/dev/shm
-
-volumes:
-    shm:
+  cloudflared:
+    image: erisamoe/cloudflared
+    restart: unless-stopped
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN=eyJhIjoiM2FhZTdlZTMyZWUwNWU5ZDU5NWNkYWU1MjIwMTZjZDMiLCJ0IjoiODUyMjllYmEtNTExZS00ODhmLTg3OWUtNWQ0ZTdjNGI2ZDVhIiwicyI6Ik5EZGlNbVEwTXpjdFlUVXlOUzAwWlRreExXRXhZekF0Wm1ZeU0yWTFPR0prTVRWaSJ9
+    depends_on:
+      - dev
