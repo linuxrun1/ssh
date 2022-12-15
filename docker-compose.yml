@@ -1,12 +1,4 @@
 services:
-  nginxprox:
-    build: rev
-    ports:
-      - 80:80
-    depends_on:
-      - mylnx
-    restart: always
-
   cloudflared:
     image: erisamoe/cloudflared
     restart: unless-stopped
@@ -26,6 +18,8 @@ services:
       - USER_PASSWORD=unix
       - USER_NAME=unix
     network_mode: "host"
+    ports:
+      - 80:80
     volumes:
       - root:/root
     restart: unless-stopped
