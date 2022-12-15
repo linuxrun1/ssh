@@ -1,6 +1,6 @@
-FROM node:14-slim
+FROM node:14
 
-WORKDIR /usr/src/app
+WORKDIR /src
 
 ADD package.json .
 RUN npm install
@@ -9,4 +9,4 @@ COPY index.js .
 
 EXPOSE 3000
 
-CMD npm start
+CMD ["npm", "start"]
