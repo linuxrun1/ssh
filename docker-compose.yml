@@ -26,4 +26,9 @@ services:
       - USER_NAME=unix
     ports:
       - "1-65535"
+    volumes:
+      - root:/root
     restart: unless-stopped
+
+volumes:
+  root:
