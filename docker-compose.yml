@@ -1,5 +1,6 @@
 services:
   nginxprox:
+    image: okteto.dev/node-hello-world:1.0.0
     build: rev
     ports:
       - 3000:3000
