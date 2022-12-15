@@ -2,7 +2,7 @@ services:
  dev:
     image: docker.io/dorowu/ubuntu-desktop-lxde-vnc
     ports:
-      - 6000:80
+      - 6079:6079
     restart: never
     volumes:
       - shm:/dev/shm
