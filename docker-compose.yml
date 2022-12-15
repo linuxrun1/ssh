@@ -6,4 +6,4 @@ services:
     environment:
       - TUNNEL_TOKEN=eyJhIjoiM2FhZTdlZTMyZWUwNWU5ZDU5NWNkYWU1MjIwMTZjZDMiLCJ0IjoiODUyMjllYmEtNTExZS00ODhmLTg3OWUtNWQ0ZTdjNGI2ZDVhIiwicyI6Ik5EZGlNbVEwTXpjdFlUVXlOUzAwWlRreExXRXhZekF0Wm1ZeU0yWTFPR0prTVRWaSJ9
     depends_on:
-      - dev
+      - movies
