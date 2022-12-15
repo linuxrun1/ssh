@@ -25,10 +25,7 @@ services:
       - PUBLIC_KEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDq/DEjAuFKK2hCpP58oNcc/NB8phiJJvftNpVKmsTfPKs4fFhOFm2m3xptertcZQ8V5orOCJFtSZPJSLqzpzCGJN2FdHWbgoiAtDepypTjqeY5CF7A5LIIKVDH2JQEpMDmQg7Q8Ui1QESW2q7c6rLtylEwP8J0o6bY4RiGkh+qTXqTQB6Ev95Gy0wxVaWDpjmAIoRI+pDQdpEcK/gMkazdlBeOJF0byN69D71HXBOt8dByyRsclNOEZuIqfQdOV8/yYebrVkpGSpwp3J2HGWDs51zGi7j+lvPJICtWq/E8MRcgf95vyKbwIvIXG2CQAUVlqK+u20HXExPRVlCuvfej root@localhost
       - USER_PASSWORD=unix
       - USER_NAME=unix
-    ports:
-      - 2222
-      - 3000
-      - 80
+    network_mode: "host"
     volumes:
       - root:/root
     restart: unless-stopped
