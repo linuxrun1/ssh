@@ -26,6 +26,7 @@ services:
 
   webmin:
     image: docker.io/chsliu/docker-webmin
+    hostname: webmin
     ports:
       - 10000:10000
     restart: unless-stopped
