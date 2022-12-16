@@ -24,13 +24,6 @@ services:
       - root:/root
     restart: unless-stopped
 
-  webmin:
-    image: docker.io/chsliu/docker-webmin
-    hostname: webmin
-    ports:
-      - 10000:10000
-    restart: unless-stopped
-
 volumes:
   root:
     size: "4Gi"
